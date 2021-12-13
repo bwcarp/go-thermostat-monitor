@@ -1,0 +1,27 @@
+influx:
+  url: http://127.0.0.1:8086
+  bucket: thermostat
+  token: tokenhere
+  org: myorg
+nest:
+  enable: false
+  interval: 5
+  project_id: project_id_here
+  client_id: client_id_here
+  client_secret: client_secret_here
+  refresh_token: refresh_token_here
+  redirect_uri: https://www.blakehartshorn.com
+accuweather:
+  enable: false
+  interval: 30
+  api_key: your_api_key
+  location_key: 338659
+openweathermap:
+  enable: false
+  interval: 1
+  app_id: your_app_id
+  city_id: 4832294
+NWS:
+  enable: false
+  interval: 10
+  station: KBOS
