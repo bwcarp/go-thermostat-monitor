@@ -125,7 +125,7 @@ func WriteNest(
 		httpClient := &http.Client{Timeout: time.Second * 10}
 		res, err := httpClient.Do(req)
 		if err != nil {
-			log.Println("ERROR: Could not get device info from server.")
+			log.Println("ERROR: Could not get device info from Nest API.")
 			log.Fatal(err)
 		}
 

@@ -51,7 +51,9 @@ func AccuWeatherWriteWeather(
 		httpClient := &http.Client{Timeout: time.Second * 10}
 		res, err := httpClient.Get(url)
 		if err != nil {
+			log.Printf("ERROR: Could not fetch %s", url)
 			log.Print(err)
+			continue
 		}
 		defer res.Body.Close()
 
