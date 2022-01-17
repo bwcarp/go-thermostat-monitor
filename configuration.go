@@ -9,9 +9,9 @@ import (
 
 // ConfigRoot - load yaml data from config file
 type ConfigRoot struct {
-	InfluxConfig InfluxConfig `yaml:"influx"`
-	NestConfig   NestConfig   `yaml:"nest"`
-	//EcobeeConfig         EcobeeConfig         `yaml:"ecobee"`
+	InfluxConfig         InfluxConfig         `yaml:"influx"`
+	NestConfig           NestConfig           `yaml:"nest"`
+	EcobeeConfig         EcobeeConfig         `yaml:"ecobee"`
 	AccuWeatherConfig    AccuWeatherConfig    `yaml:"accuweather"`
 	OpenWeatherMapConfig OpenWeatherMapConfig `yaml:"openweathermap"`
 	WeatherGovConfig     WeatherGovConfig     `yaml:"NWS"`
@@ -23,6 +23,14 @@ type InfluxConfig struct {
 	Bucket string `yaml:"bucket"`
 	Token  string `yaml:"token"`
 	Org    string `yaml:"org"`
+}
+
+// EcobeeConfig - Ecobee configuration
+type EcobeeConfig struct {
+	Enabled      bool   `yaml:"enable"`
+	Interval     int    `yaml:"interval"`
+	APIKey       string `yaml:"api_key"`
+	RefreshToken string `yaml:"refresh_token"`
 }
 
 // NestConfig - Google Nest configuration

@@ -16,7 +16,7 @@ import (
 // Need globally defined
 var NestAccessToken string
 
-// RefreshLogin - Routinely fetch a new authentication token
+// NestRefreshLogin - Routinely fetch a new authentication token
 func NestRefreshLogin(config ConfigRoot) {
 
 	// Authorization - unpack access_token
@@ -161,17 +161,13 @@ func WriteNest(
 				if device.Traits.ThermostatEco.Mode == "MANUAL_ECO" {
 					Fields["heat"] = device.Traits.ThermostatEco.Heat
 					Fields["cool"] = device.Traits.ThermostatEco.Cool
-					Tags["mode"] = "MANUAL_ECO"
 				} else if device.Traits.ThermostatMode.Mode == "HEATCOOL" {
 					Fields["heat"] = device.Traits.ThermostatTemperatureSetpoint.Heat
 					Fields["cool"] = device.Traits.ThermostatTemperatureSetpoint.Cool
-					Tags["mode"] = "HEATCOOL"
 				} else if device.Traits.ThermostatMode.Mode == "HEAT" {
 					Fields["heat"] = device.Traits.ThermostatTemperatureSetpoint.Heat
-					Tags["mode"] = "HEAT"
 				} else if device.Traits.ThermostatMode.Mode == "COOL" {
 					Fields["cool"] = device.Traits.ThermostatTemperatureSetpoint.Cool
-					Tags["mode"] = "COOL"
 				}
 
 				if device.Traits.ThermostatHvac.Status == "OFF" {

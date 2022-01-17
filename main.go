@@ -31,6 +31,11 @@ func main() {
 		time.Sleep(time.Second * 10)
 		go WriteNest(config, influxClient)
 	}
+	if config.EcobeeConfig.Enabled {
+		go EcobeeRefreshLogin(config)
+		time.Sleep(time.Second * 10)
+		go WriteEcobee(config, influxClient)
+	}
 
 	for {
 		time.Sleep(time.Hour * 1)
