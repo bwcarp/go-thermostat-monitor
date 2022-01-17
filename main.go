@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-	var configFile = flag.String("c", "./config.yaml", "Specify path to config.json")
+	var configFile = flag.String("c", "./config.yaml", "Specify path to config.yaml")
 	flag.Parse()
 
 	config := GetConfig(*configFile)

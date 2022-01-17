@@ -3,6 +3,11 @@ influx:
   bucket: thermostat
   token: tokenhere
   org: myorg
+ecobee:
+  enable: false
+  interval: 3
+  api_key: api/app_key_here
+  refresh_token: refresh_token_here
 nest:
   enable: false
   interval: 5
