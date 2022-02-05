@@ -56,7 +56,7 @@ Copy the binary to where you would prefer to run it from.
 This is presently tested on Debian Bullseye on both ARM64 and AMD64.
 
 ## Config
-You'll need to create a database in influxdb for this app in advance. If unsecured, username and password can be left blank. Mark the modules as true or false in config.json and add the appropriate API keys and station identifiers. Low intervals aren't that useful because the data provided isn't always new. The defaults shown in `config.yaml-example` are probably fine for most use cases.
+You'll need to create a bucket in influxdb for this app in advance. Mark the modules as true or false in config.yaml and add the appropriate API keys and station identifiers. Low intervals aren't that useful because the data provided isn't always new. The defaults shown in `config.yaml-example` are probably fine for most use cases.
 
 ## Running
 ```
