@@ -1,6 +1,8 @@
 # go-thermostat-monitor
 This is a small daemon for gathering thermostat data and comparing it to different weather sites. It writes to InfluxDB2.
 
+> As much as I would like to continue maintaining this project, I moved into an apartment built in 1890 so I'm rocking radiators and portable ACs. Might I recommend [Home Assistant](https://www.home-assistant.io/)? It's far more user friendly with a lot more features. This I mostly wrote as a way to learn Go. Otherwise, feel free to fork it.
+
 This is a port of my old [go-nest-temp-monitor](https://github.com/blakehartshorn/go-nest-temp-monitor) project to InfluxDB 2.0, with the addition of Ecobee support. Users on InfluxDB 1.x should seek out that project, although it is no longer maintained.
 
 #### Celsius vs Fahrenheit
